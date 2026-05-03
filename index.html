@@ -1,0 +1,372 @@
+<!-- MTG WORDPRESS SINGLE FILE
+     カスタムHTMLブロック に貼り付けるだけでOKです。
+     プラグイン不要・1ファイル完結版
+-->
+<div id="mtg-injector" data-css="@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap'); .mtg * { box-sizing: border-box; margin: 0; padding: 0; } .mtg { --black: #0a0a0a; --dark: #141414; --mid: #1e1e1e; --border: #2a2a2a; --white: #ffffff; --off: #f7f6f3; --text: #333333; --muted: #888888; --gold: #b8975a; --gold-lt: #d4ae76; --sans: 'Barlow', 'Helvetica Neue', Helvetica, Arial, sans-serif; --cond: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif; --serif: 'Cormorant Garamond', Georgia, serif; font-family: var(--sans); color: var(--black); background: var(--white); line-height: 1.5; } .mtg-nav { background: var(--black); padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 72px; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); } .mtg-nav-logo img { height: 36px; width: auto; filter: brightness(0) invert(1); } .mtg-nav-links { display: flex; gap: 32px; list-style: none; } .mtg-nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; transition: color .2s; } .mtg-nav-links a:hover { color: var(--white); } .mtg-nav-cta { background: var(--white); color: var(--black) !important; padding: 10px 22px !important; font-weight: 700 !important; letter-spacing: 0.1em; } .mtg-nav-cta:hover { background: rgba(255,255,255,0.85) !important; color: var(--black) !important; } .mtg-hero { position: relative; height: 92vh; min-height: 560px; overflow: hidden; display: flex; align-items: flex-end; } .mtg-hero-bg { position: absolute; inset: 0; background-image: url('https://www.mouratoglou.com/wp-content/uploads/2026/03/3fed151c-ccd5-4794-8447-42894d584219-MapMTCMA-1920x1080sansodessa21-1920x0-c-default.webp'); background-size: cover; background-position: center; transform: scale(1.04); transition: transform 8s ease; } .mtg-hero:hover .mtg-hero-bg { transform: scale(1); } .mtg-hero-overlay { position: absolute; inset: 0; background: linear-gradient( to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.82) 100% ); } .mtg-hero-content { position: relative; z-index: 2; padding: 64px 80px; max-width: 1100px; width: 100%; } .mtg-eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--white); font-weight: 700; margin-bottom: 20px; } .mtg-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--white); } .mtg-hero h1 { font-family: var(--cond); font-size: clamp(56px, 8vw, 110px); font-weight: 800; line-height: 0.92; letter-spacing: 0.01em; color: var(--white); text-transform: uppercase; margin-bottom: 28px; } .mtg-hero h1 em { font-style: normal; color: var(--white); } .mtg-hero-desc { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.75); max-width: 560px; line-height: 1.7; } .mtg-hero-logo { position: absolute; top: 40px; right: 80px; z-index: 3; } .mtg-hero-logo img { height: 52px; filter: brightness(0) invert(1); } .mtg-section { padding: 88px 80px; } .mtg-section-dark { background: var(--dark); color: var(--white); } .mtg-section-black { background: var(--black); color: var(--white); } .mtg-section-off { background: var(--off); } .mtg-inner { max-width: 1080px; margin: 0 auto; } .mtg-label { display: inline-flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 0.42em; text-transform: uppercase; color: inherit; opacity: 0.55; font-weight: 700; margin-bottom: 16px; } .mtg-label::before { content: ''; display: block; width: 24px; height: 1px; background: currentColor; } .mtg-h2 { font-family: var(--cond); font-size: clamp(38px, 5vw, 64px); font-weight: 800; line-height: 0.95; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 24px; } .mtg-h2-gold { color: var(--white); } .mtg-h2-white { color: var(--white); } .mtg-h2-dark { color: var(--black); } .mtg-rule { width: 48px; height: 2px; background: currentColor; opacity: 0.25; margin-bottom: 36px; } .mtg-body { font-size: 16px; font-weight: 300; line-height: 1.8; max-width: 680px; } .mtg-body-dark { color: rgba(255,255,255,0.72); } .mtg-body-light { color: #222; } .mtg-map-wrap { margin: 40px 0 0; border-radius: 2px; overflow: hidden; } .mtg-map-wrap img { width: 100%; display: block; filter: brightness(0.88) contrast(1.05); } .mtg-loc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 40px; border: 1px solid var(--border); } .mtg-loc-item { padding: 20px 22px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); } .mtg-loc-item:nth-child(4n) { border-right: none; } .mtg-loc-name { font-family: var(--cond); font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); margin-bottom: 3px; } .mtg-loc-year { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.08em; font-weight: 600; } .mtg-founder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; } .mtg-founder-photo { position: relative; } .mtg-founder-photo img { width: 100%; display: block; filter: grayscale(15%); } .mtg-founder-photo-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 32px 20px 16px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); } .mtg-founder-bio p { font-size: 16px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.75); margin-bottom: 18px; } .mtg-blockquote { border-left: 2px solid rgba(255,255,255,0.4); padding: 14px 22px; margin: 28px 0; font-family: var(--serif); font-size: 20px; line-height: 1.6; font-style: italic; color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.05); } .mtg-career-head { font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase; color: rgba(255,255,255,0.5); font-weight: 700; margin-bottom: 14px; display: block; } .mtg-career-table { width: 100%; border-collapse: collapse; } .mtg-career-table tr { border-bottom: 1px solid rgba(255,255,255,0.07); } .mtg-career-table td { padding: 9px 0; font-size: 14px; color: rgba(255,255,255,0.65); } .mtg-career-table td:last-child { text-align: right; color: rgba(255,255,255,0.45); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; } .mtg-timeline { position: relative; padding-left: 44px; } .mtg-timeline::before { content: ''; position: absolute; left: 3px; top: 12px; bottom: 0; width: 1px; background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.05) 100%); } .mtg-tl-item { position: relative; margin-bottom: 48px; } .mtg-tl-item::before { content: ''; position: absolute; left: -41px; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--black); box-shadow: 0 0 0 4px rgba(0,0,0,0.12); } .mtg-tl-year { font-family: var(--cond); font-size: 32px; font-weight: 800; color: var(--white); letter-spacing: 0.04em; margin-bottom: 8px; line-height: 1; } .mtg-tl-item p { font-size: 15px; line-height: 1.75; color: var(--black); max-width: 680px; } .mtg-pillars { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 48px; border: 1px solid var(--border); } .mtg-pillar { padding: 32px 24px; border-right: 1px solid var(--border); transition: background .25s; } .mtg-pillar:last-child { border-right: none; } .mtg-pillar:hover { background: rgba(255,255,255,0.05); } .mtg-pillar-n { font-family: var(--cond); font-size: 48px; font-weight: 800; color: rgba(255,255,255,0.1); line-height: 1; margin-bottom: 12px; } .mtg-pillar h4 { font-family: var(--cond); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); margin-bottom: 10px; } .mtg-pillar p { font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.55); } .mtg-values { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border: 1px solid #e0ddd6; margin-top: 48px; } .mtg-value { padding: 28px 22px; border-right: 1px solid #e0ddd6; border-bottom: 1px solid #e0ddd6; transition: background .2s; } .mtg-value:nth-child(5n) { border-right: none; } .mtg-value:nth-last-child(-n+5) { border-bottom: none; } .mtg-value:hover { background: rgba(0,0,0,0.04); } .mtg-value h4 { font-family: var(--cond); font-size: 16px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: var(--black); margin-bottom: 6px; } .mtg-value p { font-size: 12px; line-height: 1.6; color: #444; } .mtg-cta { background: var(--black); color: var(--white); padding: 100px 80px; } .mtg-cta-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; } .mtg-reasons { list-style: none; margin-top: 32px; } .mtg-reasons li { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid var(--border); font-size: 15px; color: rgba(255,255,255,0.72); line-height: 1.5; } .mtg-reasons li:first-child { border-top: 1px solid var(--border); } .mtg-check { width: 20px; height: 20px; border: 1px solid rgba(255,255,255,0.4); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px; font-size: 10px; color: var(--white); } .mtg-cta-right { display: flex; flex-direction: column; gap: 24px; } .mtg-cta-right p { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.8; } .mtg-btn { display: inline-block; background: var(--white); color: var(--black) !important; text-decoration: none !important; padding: 16px 36px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; transition: background .2s, transform .2s; align-self: flex-start; margin-top: 8px; } .mtg-btn:hover { background: rgba(255,255,255,0.85); transform: translateY(-2px); } .mtg-btn-outline { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: var(--white) !important; } .mtg-btn-outline:hover { background: rgba(255,255,255,0.08); } .mtg-footer { background: var(--black); border-top: 1px solid var(--border); padding: 32px 80px; display: flex; align-items: center; justify-content: space-between; } .mtg-footer img { height: 30px; filter: brightness(0) invert(1); opacity: 0.7; } .mtg-footer p { font-size: 12px; color: rgba(255,255,255,0.35); letter-spacing: 0.08em; } @media (max-width: 900px) { .mtg-section { padding: 64px 32px; } .mtg-hero-content { padding: 48px 32px; } .mtg-hero-logo { right: 32px; top: 24px; } .mtg-nav { padding: 0 24px; } .mtg-nav-links { display: none; } .mtg-founder-grid { grid-template-columns: 1fr; gap: 40px; } .mtg-pillars { grid-template-columns: 1fr 1fr; } .mtg-pillar:nth-child(2n) { border-right: none; } .mtg-pillar { border-bottom: 1px solid var(--border); } .mtg-values { grid-template-columns: 1fr 1fr; } .mtg-value:nth-child(5n) { border-right: 1px solid #e0ddd6; } .mtg-value:nth-child(2n) { border-right: none; } .mtg-loc-grid { grid-template-columns: 1fr 1fr; } .mtg-loc-item:nth-child(4n) { border-right: 1px solid var(--border); } .mtg-loc-item:nth-child(2n) { border-right: none; } .mtg-cta { padding: 64px 32px; } .mtg-cta-inner { grid-template-columns: 1fr; gap: 40px; } .mtg-footer { padding: 28px 32px; flex-direction: column; gap: 12px; text-align: center; } } @media (max-width: 560px) { .mtg-pillars { grid-template-columns: 1fr; } .mtg-values { grid-template-columns: 1fr; } .mtg-loc-grid { grid-template-columns: 1fr; } .mtg-value:nth-child(n) { border-right: none; border-bottom: 1px solid #e0ddd6; } } .mtg-form-section { background: var(--dark); padding: 96px 80px; } .mtg-form-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 380px 1fr; gap: 80px; align-items: start; } .mtg-form-intro p { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.65); margin-bottom: 16px; } .mtg-form-intro strong { color: var(--white); font-weight: 600; } .mtg-form-intro .mtg-contact-email { display: inline-flex; align-items: center; gap: 10px; margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.5); letter-spacing: 0.04em; } .mtg-form-intro .mtg-contact-email a { color: var(--white); text-decoration: none; font-weight: 600; } .mtg-form-intro .mtg-contact-email a:hover { text-decoration: underline; } .mtg-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; } .mtg-form .full { grid-column: 1 / -1; } .mtg-field { display: flex; flex-direction: column; gap: 6px; } .mtg-field label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.45); } .mtg-field label span { color: rgba(255,255,255,0.7); } .mtg-field input, .mtg-field select, .mtg-field textarea { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: var(--white); font-family: var(--sans); font-size: 14px; font-weight: 300; padding: 13px 16px; outline: none; transition: border-color .2s, background .2s; width: 100%; appearance: none; -webkit-appearance: none; } .mtg-field input::placeholder, .mtg-field textarea::placeholder { color: rgba(255,255,255,0.22); } .mtg-field input:focus, .mtg-field select:focus, .mtg-field textarea:focus { border-color: rgba(255,255,255,0.45); background: rgba(255,255,255,0.08); } .mtg-field select option { background: #1e1e1e; color: var(--white); } .mtg-field textarea { resize: vertical; min-height: 120px; } .mtg-radio-group { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; } .mtg-radio-group label { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.65); letter-spacing: 0; text-transform: none; cursor: pointer; } .mtg-radio-group input[type=\"radio\"] { width: 16px; height: 16px; flex-shrink: 0; accent-color: var(--white); padding: 0; } .mtg-form-submit { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 8px; } .mtg-form-note { font-size: 12px; color: rgba(255,255,255,0.3); line-height: 1.6; max-width: 480px; } #mtg-success { display: none; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); padding: 20px 24px; font-size: 14px; color: rgba(255,255,255,0.8); grid-column: 1 / -1; line-height: 1.6; } @media (max-width: 900px) { .mtg-form-section { padding: 64px 28px; } .mtg-form-inner { grid-template-columns: 1fr; gap: 40px; } .mtg-form { grid-template-columns: 1fr; } .mtg-form .full { grid-column: 1; } .mtg-form-submit { flex-direction: column; align-items: flex-start; } }"></div>
+<noscript><p style="color:red;font-weight:bold;">JavaScriptを有効にしてください。</p></noscript>
+
+<div class="mtg">
+
+  <!-- NAVBAR -->
+  <nav class="mtg-nav">
+    <a class="mtg-nav-logo" href="https://www.mouratoglou.com/en/" target="_blank">
+      <img src="https://www.mouratoglou.com/wp-content/uploads/2026/02/f09ba860-ded8-4975-a924-335b80978360-Logo-30Years-Lockup-Mouratoglou-Light-Black-cropped1.svg" alt="Mouratoglou" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=&quot;font-family:Arial;font-weight:900;color:#fff;font-size:18px&quot;>MOURATOGLOU</span>'" />
+    </a>
+    <ul class="mtg-nav-links">
+      <li><a href="#founder">創設者</a></li>
+      <li><a href="#heritage">25年の歴史</a></li>
+      <li><a href="#method">メソッド</a></li>
+      <li><a href="#values">バリュー</a></li>
+      <li><a href="#partnership" class="mtg-nav-cta">パートナーシップ</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="mtg-hero">
+    <div class="mtg-hero-bg"></div>
+    <div class="mtg-hero-overlay"></div>
+    <div class="mtg-hero-logo">
+      <img src="https://www.mouratoglou.com/wp-content/uploads/2026/02/f09ba860-ded8-4975-a924-335b80978360-Logo-30Years-Lockup-Mouratoglou-Light-Black-cropped1.svg" alt="Mouratoglou" onerror="this.style.display='none'" />
+    </div>
+    <div class="mtg-hero-content">
+      <p class="mtg-eyebrow">Global Partnership</p>
+      <h1>Mouratoglou<br><em>International</em></h1>
+      <p class="mtg-hero-desc">
+        1996年の創設以来、世界最高水準のテニス指導を共通言語に、アブダビからアメリカ、アジアからヨーロッパへ——ムラトグルーは今、世界規模でパートナーを求めています。
+      </p>
+    </div>
+  </section>
+
+  <!-- GLOBAL PRESENCE -->
+  <section id="international" class="mtg-section mtg-section-dark">
+    <div class="mtg-inner">
+      <p class="mtg-label">Centres &amp; Academies Abroad</p>
+      <h2 class="mtg-h2 mtg-h2-gold">世界各地の<br>センター＆アカデミー</h2>
+      <div class="mtg-rule"></div>
+      <p class="mtg-body mtg-body-dark">
+        南フランスでの成功を礎に、ムラトグルーグループは世界各地に複数のセンターとアカデミーを開設。2020年以降、卓越した指導力を共通言語として急速なグローバル展開を続けています。
+      </p>
+      <div class="mtg-map-wrap">
+        <img src="https://www.mouratoglou.com/wp-content/uploads/2026/03/3fed151c-ccd5-4794-8447-42894d584219-MapMTCMA-1920x1080sansodessa21-1920x0-c-default.webp" alt="Mouratoglou International Map" onerror="this.parentElement.style.display='none'" />
+      </div>
+      <div class="mtg-loc-grid">
+        <div class="mtg-loc-item"><p class="mtg-loc-name">French Riviera</p><p class="mtg-loc-year">1996 — 本拠地</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Kuala Lumpur</p><p class="mtg-loc-year">2022</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Sardinia</p><p class="mtg-loc-year">2023</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Horseshoe Bay</p><p class="mtg-loc-year">2024</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Naples Tiburón</p><p class="mtg-loc-year">2024</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Abu Dhabi</p><p class="mtg-loc-year">2025</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Boston</p><p class="mtg-loc-year">2025</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">San Francisco</p><p class="mtg-loc-year">2025</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Templeton</p><p class="mtg-loc-year">2025</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Amelia Island</p><p class="mtg-loc-year">2025</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Guadalajara</p><p class="mtg-loc-year">2025</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Cairo</p><p class="mtg-loc-year">2025</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Bali</p><p class="mtg-loc-year">2025</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Zephyrhills</p><p class="mtg-loc-year">2025</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Boca Raton</p><p class="mtg-loc-year">2026</p></div>
+        <div class="mtg-loc-item"><p class="mtg-loc-name">Indianapolis</p><p class="mtg-loc-year">2026</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section id="founder" style="background:#0a0a0a;color:#fff;padding:0;overflow:hidden;">
+    <div id="mtg-founder-grid" style="display:grid;grid-template-columns:1fr 1fr;min-height:700px;">
+      <div id="mtg-founder-photo" style="position:relative;overflow:hidden;min-height:600px;">
+        <img
+          src="https://www.patrickmouratoglou.com/wp-content/uploads/T665-scaled.jpg"
+          alt="Patrick Mouratoglou"
+          style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:grayscale(10%);"
+          onerror="this.src='https://www.mouratoglou.com/wp-content/uploads/2024/11/fbfd1319-f1ab-45da-afbe-c4c19982c3fe-0R6A3642-269x269-c-center.webp';this.style.objectPosition='center';"
+        />
+        <div style="position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(transparent,rgba(0,0,0,0.6));pointer-events:none;"></div>
+        <div style="position:absolute;bottom:28px;left:32px;">
+          <p style="font-size:10px;letter-spacing:0.38em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:4px;font-weight:700;">The Founder</p>
+          <p style="font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;font-size:28px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;color:#fff;line-height:1;">Patrick Mouratoglou</p>
+        </div>
+      </div>
+      <div id="mtg-founder-bio" style="padding:72px 64px;display:flex;flex-direction:column;justify-content:center;background:#0a0a0a;">
+        <p class="mtg-label" style="color:#fff;">Patrick Mouratoglou</p>
+        <h2 class="mtg-h2 mtg-h2-white" style="font-size:clamp(32px,4vw,52px);">創設者<br>プロフィール</h2>
+        <div class="mtg-rule"></div>
+        <p style="font-size:15px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.72);margin-bottom:16px;">
+          1970年6月、フランス生まれ。自由と卓越性を重んじる家庭に育ち、4歳でテニスと出会う。15歳でプロを夢見たが両親に反対され、その挫折を情熱へと変えた。
+        </p>
+        <p style="font-size:15px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.72);margin-bottom:24px;">
+          26歳でベテランコーチのボブ・ブレットと共にモントルイユにアカデミーを設立。2016年にフランスのリビエラへ移転し、ヨーロッパNo.1の世界最先端テニスアカデミーに成長させた。
+        </p>
+        <div class="mtg-blockquote">
+          「私には与えられなかったチャンスを、多くの若者に与えることが私の新たな目標になりました。」
+        </div>
+        <span class="mtg-career-head" style="margin-top:32px;">コーチングキャリア（1999年〜）</span>
+        <table class="mtg-career-table">
+          <tr><td>マルコス・バグダティス</td><td>1999–2006</td></tr>
+          <tr><td>アナスタシア・パヴリュチェンコワ</td><td>2007–2009</td></tr>
+          <tr><td>ヤニナ・ウィックマイヤー</td><td>2009–2012</td></tr>
+          <tr><td>ローラ・ロブソン</td><td>2010–2011</td></tr>
+          <tr><td>グリゴール・ディミトロフ</td><td>2012</td></tr>
+          <tr><td>セリーナ・ウィリアムズ</td><td>2012–2022</td></tr>
+          <tr><td>ステファノス・チチパス</td><td>2018–2021</td></tr>
+          <tr><td>シモナ・ハレプ</td><td>2022–2023</td></tr>
+          <tr><td>ホルガー・ルーネ</td><td>2022–2024</td></tr>
+          <tr><td>大坂なおみ</td><td>2024–2025</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="heritage" class="mtg-section mtg-section-off">
+    <div class="mtg-inner">
+      <p class="mtg-label">Over 25 Years of Heritage</p>
+      <h2 class="mtg-h2 mtg-h2-dark">25年以上の<br>歴史と実績</h2>
+      <div class="mtg-rule"></div>
+      <div class="mtg-timeline">
+        <div class="mtg-tl-item">
+          <p class="mtg-tl-year">1996</p>
+          <p>パリにてムラトグル・アカデミーが創設。パトリックは人々に貢献したいという想いに駆られ、自らの功績の礎を築き始めた。ボブ・ブレットとの6年間のパートナーシップがコーチングの基礎を形成。</p>
+        </div>
+        <div class="mtg-tl-item">
+          <p class="mtg-tl-year">2006</p>
+          <p>最初の教え子マルコス・バグダティスが全豪オープン決勝に進出。ロジャー・フェデラーに4セットで敗れたが、コーチとしての名声を確立した。</p>
+        </div>
+        <div class="mtg-tl-item">
+          <p class="mtg-tl-year">2007–2011</p>
+          <p>パヴリチェンコワ、アラヴァン・レザイ、ウィックマイヤー、ローラ・ロブソンらのWTAランキング向上に貢献。女子テニス界での指導力を証明。</p>
+        </div>
+        <div class="mtg-tl-item">
+          <p class="mtg-tl-year">2012</p>
+          <p>グリゴール・ディミトロフを6か月以内にATPランキング50位以内へ押し上げ。同年セリーナ・ウィリアムズのコーチに就任。彼女はさらに10のメジャータイトルと2つのオリンピック金メダルを獲得し、196週連続世界ランキング1位を維持、史上最高の選手としての地位を確立。</p>
+        </div>
+        <div class="mtg-tl-item">
+          <p class="mtg-tl-year">2014</p>
+          <p>資金不足により最高レベルに到達できない若い選手を支援する「Champ'seed Foundation」を設立。チチパス、ホルガー・ルネ、ガウフ、ポピリンらを輩出。</p>
+        </div>
+        <div class="mtg-tl-item">
+          <p class="mtg-tl-year">2016</p>
+          <p>アカデミーをコート ダジュールの中核、ソフィア アンティポリスへ正式移転。世界最も先進的なテニスセンターへと成長。</p>
+        </div>
+        <div class="mtg-tl-item">
+          <p class="mtg-tl-year">2020–</p>
+          <p>国際展開を本格始動。マレーシアを皮切りにアメリカ、中東、アジア、南欧、ラテンアメリカへと拠点を急拡大。現在も世界各地で新たなパートナーシップを評価中。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="method" class="mtg-section mtg-section-dark">
+    <div class="mtg-inner">
+      <p class="mtg-label">The Mouratoglou Method</p>
+      <h2 class="mtg-h2 mtg-h2-white">ムラトグルー<br>メソッド</h2>
+      <div class="mtg-rule"></div>
+      <p class="mtg-body mtg-body-dark">
+        標準的な手法は存在しません。各選手は個性、ニーズ、目標に応じたオーダーメイドのアプローチを必要とする、唯一無二のプロジェクト。このメソッドはテニスを超え、あらゆる分野に応用可能です。
+      </p>
+      <div class="mtg-pillars">
+        <div class="mtg-pillar"><p class="mtg-pillar-n">01</p><h4>傾聴</h4><p>言葉を超えた深い理解。アスリートの感情と思考に寄り添う。</p></div>
+        <div class="mtg-pillar"><p class="mtg-pillar-n">02</p><h4>個別指導</h4><p>各選手の特定のニーズに合わせ、完全オーダーメイドのトレーニングを構築。</p></div>
+        <div class="mtg-pillar"><p class="mtg-pillar-n">03</p><h4>卓越性</h4><p>常に高みを目指し、限界を押し広げる不断の追求。</p></div>
+        <div class="mtg-pillar"><p class="mtg-pillar-n">04</p><h4>結果重視</h4><p>コート内外で具体的かつ測定可能な成果を上げる文化。</p></div>
+        <div class="mtg-pillar"><p class="mtg-pillar-n">05</p><h4>革新</h4><p>絶え間ない問いかけと再発明。常識を超え続ける姿勢。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section id="values" class="mtg-section mtg-section-off">
+    <div class="mtg-inner">
+      <p class="mtg-label">Our Core Values</p>
+      <h2 class="mtg-h2 mtg-h2-dark">10のコア<br>バリュー</h2>
+      <div class="mtg-rule"></div>
+      <div class="mtg-values">
+        <div class="mtg-value"><h4>情熱</h4><p>私たちのすべての行動の原動力。</p></div>
+        <div class="mtg-value"><h4>努力</h4><p>成功は才能ではなく、努力と忍耐にかかっている。</p></div>
+        <div class="mtg-value"><h4>自信</h4><p>誰もが自身の可能性を信じられる力を与える。</p></div>
+        <div class="mtg-value"><h4>自己挑戦</h4><p>進歩のために常に自らに挑戦し続ける。</p></div>
+        <div class="mtg-value"><h4>卓越性</h4><p>あらゆることに卓越性を追求する。</p></div>
+        <div class="mtg-value"><h4>カスタマイズ</h4><p>一人ひとりのニーズに合わせて手法を適応させる。</p></div>
+        <div class="mtg-value"><h4>野心</h4><p>常に高みを目指し、限界を押し広げる。</p></div>
+        <div class="mtg-value"><h4>革新</h4><p>新しいアイデアと創造的な解決策を受け入れる。</p></div>
+        <div class="mtg-value"><h4>献身</h4><p>アスリートとコミュニティに身を捧げる。</p></div>
+        <div class="mtg-value"><h4>社会的貢献</h4><p>社会に還元し、スポーツを通じてポジティブな影響を与える。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERSHIP CTA -->
+  <section id="partnership" class="mtg-cta">
+    <div class="mtg-cta-inner">
+      <div>
+        <p class="mtg-label">Share Your Project</p>
+        <h2 class="mtg-h2 mtg-h2-white" style="font-size:clamp(38px,4.5vw,58px);max-width:9em;line-height:1;">パートナーシップの<br>ご案内</h2>
+        <div class="mtg-rule"></div>
+        <ul class="mtg-reasons">
+          <li><span class="mtg-check">&#10003;</span>テニス界における世界的評価と卓越した指導力</li>
+          <li><span class="mtg-check">&#10003;</span>実績ある運営モデルとトレーニング手法</li>
+          <li><span class="mtg-check">&#10003;</span>360°サポート：技術指導・マーケティング・運営支援</li>
+          <li><span class="mtg-check">&#10003;</span>プレミアムなポジショニングと急成長中の国際ネットワーク</li>
+        </ul>
+      </div>
+      <div class="mtg-cta-right">
+        <p>ラグジュアリーリゾートの開発、プレミアムスポーツ施設の立ち上げ、未来のテニススター育成コミュニティの構築——あらゆる取り組みにおいて、ムラトグルーブランドは比類なき指導ノウハウ、国際的な認知度、そしてパフォーマンス・メディア・イノベーションを統合した強力なエコシステムを提供します。</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.45);">現在、世界中の成長可能性の高い地域で新たな機会を評価中です。</p>
+        <a href="#contact" class="mtg-btn">プロジェクトを相談する</a>
+        <a href="https://www.mouratoglou.com/en/international/" target="_blank" class="mtg-btn mtg-btn-outline">詳細を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" class="mtg-form-section">
+    <div class="mtg-form-inner">
+      <div class="mtg-form-intro">
+        <p class="mtg-label" style="color:rgba(255,255,255,0.4);">Contact Us</p>
+        <h2 class="mtg-h2 mtg-h2-white" style="font-size:clamp(32px,4vw,52px);margin-bottom:24px;">プロジェクトを<br>共有する</h2>
+        <div class="mtg-rule"></div>
+        <p>ムラトグルーとのコラボレーションに向けて、プロジェクトの詳細をお知らせください。すべての提案は国際開発チームが責任を持って審査し、<strong>厳格な機密保持のもと</strong>対応いたします。</p>
+        <p>ラグジュアリーリゾート、プレミアムスポーツ施設、テニスアカデミー、インターナショナルスクール——あらゆるプロジェクトをお待ちしています。</p>
+        <div class="mtg-contact-email">
+          <span>&#9993;</span>
+          <span>お問い合わせ先：<a href="mailto:info@mouratoglou-international.com">info@mouratoglou-international.com</a></span>
+        </div>
+      </div>
+      <div>
+        <form id="mtg-contact-form" class="mtg-form" onsubmit="mtgSubmitForm(event)">
+          <div class="mtg-field">
+            <label>名前 <span>*</span></label>
+            <input type="text" name="firstname" placeholder="First name" required />
+          </div>
+          <div class="mtg-field">
+            <label>苗字 <span>*</span></label>
+            <input type="text" name="lastname" placeholder="Last name" required />
+          </div>
+          <div class="mtg-field">
+            <label>メールアドレス <span>*</span></label>
+            <input type="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="mtg-field">
+            <label>電話番号 <span>*</span></label>
+            <input type="tel" name="phone" placeholder="+81 XX XXXX XXXX" required />
+          </div>
+          <div class="mtg-field">
+            <label>会社名 <span>*</span></label>
+            <input type="text" name="company" placeholder="Company name" required />
+          </div>
+          <div class="mtg-field">
+            <label>会社ウェブサイト <span>*</span></label>
+            <input type="url" name="website" placeholder="https://" required />
+          </div>
+          <div class="mtg-field">
+            <label>LinkedIn プロフィール</label>
+            <input type="url" name="linkedin" placeholder="https://linkedin.com/in/..." />
+          </div>
+          <div class="mtg-field">
+            <label>拠点（国・都市） <span>*</span></label>
+            <input type="text" name="location" placeholder="例：東京、日本" required />
+          </div>
+          <div class="mtg-field full">
+            <label>施設タイプ <span>*</span></label>
+            <select name="facility_type" required>
+              <option value="" disabled selected>選択してください</option>
+              <option value="ラグジュアリーリゾート">ラグジュアリーリゾート</option>
+              <option value="テニスクラブ">テニスクラブ</option>
+              <option value="スポーツアカデミー">スポーツアカデミー</option>
+              <option value="インターナショナルスクール">インターナショナルスクール</option>
+              <option value="プライベートコミュニティ">プライベートコミュニティ</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div class="mtg-field full">
+            <label>プロジェクト概要 <span>*</span></label>
+            <textarea name="description" placeholder="プロジェクトについて、数行でご説明ください..." required></textarea>
+          </div>
+          <div class="mtg-field full">
+            <label>現在のプロジェクトステージ <span>*</span></label>
+            <div class="mtg-radio-group">
+              <label><input type="radio" name="stage" value="アイデア・初期段階" required /> アイデア・初期段階</label>
+              <label><input type="radio" name="stage" value="開発中" /> 開発中</label>
+              <label><input type="radio" name="stage" value="拠点確定済み" /> 拠点確定済み</label>
+              <label><input type="radio" name="stage" value="既存施設のリブランド・パートナーシップ検討" /> 既存施設のリブランド・パートナーシップ検討</label>
+            </div>
+          </div>
+          <div id="mtg-success">
+            &#10003; &nbsp;メッセージをお送りいただきありがとうございます。担当チームより3営業日以内にご連絡いたします。
+          </div>
+          <div class="mtg-form-submit">
+            <p class="mtg-form-note">
+              送信されたすべての情報は厳格な機密保持のもとで管理されます。<br>
+              送信先：info@mouratoglou-international.com
+            </p>
+            <button type="submit" class="mtg-btn" style="margin-top:0;">送信する</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mtg-footer">
+    <img src="https://www.mouratoglou.com/wp-content/uploads/2026/02/f09ba860-ded8-4975-a924-335b80978360-Logo-30Years-Lockup-Mouratoglou-Light-Black-cropped1.svg" alt="Mouratoglou" onerror="this.style.display='none'" />
+    <p>© Mouratoglou Academy — mouratoglou.com</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  try {
+    var el = document.getElementById('mtg-injector');
+    if (!el) return;
+    var css = el.getAttribute('data-css');
+    if (!css) return;
+    var st = document.createElement('style');
+    st.textContent = css;
+    (document.head || document.documentElement).appendChild(st);
+  } catch(e) {}
+})();
+
+function mtgSubmitForm(e) {
+  e.preventDefault();
+  var f = e.target;
+  var stageEl = f.querySelector('input[name="stage"]:checked');
+  var fields = {
+    firstname:     f.firstname.value,
+    lastname:      f.lastname.value,
+    email:         f.email.value,
+    phone:         f.phone.value,
+    company:       f.company.value,
+    website:       f.website.value,
+    linkedin:      f.linkedin.value,
+    location:      f.location.value,
+    facility_type: f.facility_type.value,
+    description:   f.description.value,
+    stage:         stageEl ? stageEl.value : '未選択'
+  };
+  var body = [
+    '【Mouratoglou International - パートナーシップお問い合わせ】',
+    '',
+    '■ 名前: ' + fields.firstname + ' ' + fields.lastname,
+    '■ メール: ' + fields.email,
+    '■ 電話: ' + fields.phone,
+    '■ 会社名: ' + fields.company,
+    '■ ウェブサイト: ' + fields.website,
+    '■ LinkedIn: ' + (fields.linkedin || '未入力'),
+    '■ 拠点: ' + fields.location,
+    '■ 施設タイプ: ' + fields.facility_type,
+    '■ プロジェクトステージ: ' + fields.stage,
+    '',
+    '■ プロジェクト概要:',
+    fields.description
+  ].join('\n');
+  var mailto = 'mailto:info@mouratoglou-international.com'
+    + '?subject=' + encodeURIComponent('【パートナーシップ】' + fields.company + ' - ' + fields.location)
+    + '&body=' + encodeURIComponent(body);
+  window.location.href = mailto;
+  var success = document.getElementById('mtg-success');
+  if (success) success.style.display = 'block';
+  var btn = f.querySelector('button[type=submit]');
+  if (btn) { btn.disabled = true; btn.textContent = '送信済み'; btn.style.opacity = '0.5'; }
+}
+</script>
